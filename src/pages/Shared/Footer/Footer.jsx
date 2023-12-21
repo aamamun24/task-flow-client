@@ -3,7 +3,7 @@ import Container from "../../../components/Container";
 
 const Footer = () => {
     return (
-        <footer className="bg-white dark:bg-gray-900">
+        <footer className="bg-white">
             <Container>
                 <div className="grid grid-cols-2 gap-8 md:grid-cols-3">
                     <div>
