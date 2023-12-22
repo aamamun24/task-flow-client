@@ -40,8 +40,8 @@ const Sidebar = () => {
                     <div className='flex flex-col justify-between flex-1 mt-6 ml-2' >
                         <ul>
                             <li>
-                                <NavLink to="/dashboard" className={({ isActive }) => isActive ? "text-[#FD661F] text-lg font-bold" : "text-[#252641] text-lg font-medium"
-                                }>Dashboard</NavLink>
+                                <NavLink to="/dashboard/task" className={({ isActive }) => isActive ? "text-[#FD661F] text-lg font-bold" : "text-[#252641] text-lg font-medium"
+                                }>Task Management</NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/add-task" className={({ isActive }) => isActive ? "text-[#FD661F] text-lg font-bold" : "text-[#252641] text-lg font-medium"

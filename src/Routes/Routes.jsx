@@ -7,11 +7,14 @@ import Dashboard from "../layouts/Dashboard";
 import Profile from "../pages/Dashboard/Profile/Profile";
 import PrivateRoute from "./PrivateRoute";
 import AddTask from "../pages/Dashboard/AddTask/AddTask";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Task from "../pages/Dashboard/Task/Task";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Main />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: '/',
@@ -34,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: 'profile',
                 element: <PrivateRoute><Profile /></PrivateRoute>
+            },
+            {
+                path: 'task',
+                element: <PrivateRoute><Task /></PrivateRoute>
             },
             {
                 path: 'add-task',

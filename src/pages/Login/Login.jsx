@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import SocialLogin from "../../components/SocialLogin";
 import useAuth from "../../hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
@@ -33,6 +34,9 @@ const Login = () => {
     return (
         <div className="h-screen flex flex-col items-center justify-center ">
             <div className="bg-gray-100 p-8 rounded shadow-md w-11/12 md:w-1/3">
+                <Helmet>
+                    <title>Task Flow | Login</title>
+                </Helmet>
                 <h2 className="text-3xl text-center font-semibold mb-6">Login</h2>
                 <form onSubmit={handleLogin}>
                     <div className="mb-4">

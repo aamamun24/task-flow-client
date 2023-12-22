@@ -3,17 +3,19 @@ import { navLinks } from '../../../constants';
 import { Link, NavLink } from 'react-router-dom';
 import Container from '../../../components/Container';
 import useAuth from '../../../hooks/useAuth';
+import { FaUserCircle } from "react-icons/fa";
+import logo from '../../../../public/logo.png'
 
 const Navbar = () => {
     const { user, logOut } = useAuth()
     return (
-        <nav className="bg-pink-400 border-gray-200 p-4">
+        <nav className="bg-secondary border-gray-200 p-4">
             <Container>
                 <div className="flex flex-wrap items-center justify-between">
 
                     {/* Logo */}
                     <Link to='/' className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="TaskFlow" />
+                        <img src={logo} className="h-8" alt="TaskFlow" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">TaskFlow</span>
                     </Link>
 
@@ -24,7 +26,7 @@ const Navbar = () => {
                             {user ?
                                 <img className="w-8 h-8 rounded-full" src={user?.photoURL} alt="user photo" />
                                 :
-                                <img src="userphoto" alt="userphoto" />
+                                <FaUserCircle className='text-4xl text-white' />
                             }
                         </button>
 

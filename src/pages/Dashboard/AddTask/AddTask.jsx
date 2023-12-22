@@ -26,7 +26,7 @@ const AddTask = () => {
             const taskRes = await axiosSecure.post('/task', addTask)
             if (taskRes.data.insertedId) {
                 toast.success('Task added')
-                navigate('/dashboard')
+                navigate('/dashboard/task')
             }
         }
     }
